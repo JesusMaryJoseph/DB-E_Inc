@@ -7,10 +7,48 @@
 
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<link rel="stylesheet" type="text/css" href="css/proposal.css">
 	<script src="js/Nav_Handler.js"></script>
 	<script src="js/HTML_Manager.js"></script>
 
 	<style>
+		.edu-label{
+			font-size: 2em;
+			font-weight: bold;
+			color: yellow;
+			cursor: pointer;
+			z-index: 5;
+		}
+			.edu-label:hover{
+				font-size: 2.1em;
+			}
+
+		.edu-contents{
+			display: grid;
+			grid-template-columns:1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas:
+				'proposal packets resources'
+				'training . testing';
+    		grid-column-gap: 5em;
+			margin-top: 30vh;
+			/*border: 1px solid red; */
+		}
+			.edu-proposal{
+				grid-area: proposal;
+			}
+			.edu-packets{
+				grid-area: packets;
+			}
+			.edu-resources{
+				grid-area: resources;
+			}
+			.edu-training{
+				grid-area: training;
+			}	}
+			.edu-testing{
+				grid-area: testing;
+			}
 	</style>
 	
 </head>
@@ -37,9 +75,10 @@
 
 	<div class="page">
 		<h1 class="welcome-label">Welcome to the<br>Education Department</h1>
-		<div class="dept-contents">
-			<div class="dept-packets">
-				<label class="dept-label" onclick="HTML_Manager.dropdown('edu-packet-drpdwn-id')">Packets</label>
+		<div class="edu-contents">
+			<label class="edu-label edu-proposal" onclick="HTML_Manager.load('html/Proposal.html')">Proposal</label>
+			<div class="edu-packets">
+				<label class="edu-label">Packets</label>
 			<!--	<div id="edu-packet-drpdwn-id">
 					<ul>
 						<li>CEO</li>
@@ -51,8 +90,8 @@
 						<li>Meida/Arts</li>
 					</ul> -->
 				</div>
-				<div class="dept-resources">
-					<label class="dept-label" onclick="HTML_Manager.dropdown('edu-resources-drpdwn-id')">Resources</label>
+				<div class="edu-resources">
+					<label class="edu-label">Resources</label>
 				<!--	<div id="edu-resources-drpdwn-id">
 						<ul>
 							<li>Resource #1</li>
@@ -62,8 +101,8 @@
 						</ul>
 					</div> -->
 				</div>
-				<div class="dept-training">
-					<label class="dept-label" onclick="HTML_Manager.dropdown('edu-training-drpdwn-id')">Training</label>
+				<div class="edu-training">
+					<label class="edu-label">Training</label>
 				<!--	<div id="edu-training-drpdwn-id">
 						<ul>
 							<li>Resource #1</li>
@@ -73,8 +112,8 @@
 						</ul>
 					</div> -->
 				</div>
-				<div class="dept-testing">
-					<label class="dept-label" onclick="HTML_Manager.dropdown('edu-testing-drpdwn-id')">Testing</label>
+				<div class="edu-testing">
+					<label class="edu-label">Testing</label>
 				<!--	<div id="edu-testing-drpdwn-id">
 						<ul>
 							<li>Test #1</li>
