@@ -31,7 +31,7 @@ let HTML_Manager = {
 
     close: function(){
         this.htmlTargetEle.style.opacity = "0";
-        this.htmlTargetEle.style.zIndex = -10;
+       /* this.htmlTargetEle.style.zIndex = -10; */
     },
 
     transitionHasEnded: function(){

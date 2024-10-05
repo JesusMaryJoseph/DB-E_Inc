@@ -8,6 +8,7 @@
     padding: 1em;
     z-index: -10;
     opacity: 0;
+    transition: opacity 1s;
     overflow: scroll;
     background-image: radial-gradient(blue, black);
     border-radius: 0.2em;
