@@ -1,0 +1,37 @@
+
+.dept-html{
+    position: absolute;
+    top: 0.5em; 
+    left: 25%;
+    width: 50%;
+    height: 95vh;
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 1s;
+    color: yellow;
+    background-image: radial-gradient(blue, black);
+/*background-color: #2196F3; */
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding: 0 1em;
+    overflow-y: scroll; 
+    /*z-index: 10; */
+}
+.close-dept-html{
+    position:absolute;
+    top: 0;
+    right: 0.5em; 
+    margin-left: 95%;
+    cursor: pointer;
+    color: black;
+    border: 1px solid red; 
+    border-radius: 5px;
+    background-color: red;
+    padding: 0 0.2em;
+    font-size: 1.5em;
+}
+
+.close-dept-html:hover{
+    font-size: 1.6em;
+    font-weight: bold;
+}

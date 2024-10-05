@@ -1,0 +1,21 @@
+
+.body{
+	background: black;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+	.page{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 98vh;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		color: white;
+		background-image: radial-gradient(blue, black);
+	}

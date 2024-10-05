@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Media Dept</title>
+
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<script src="js/Nav_Handler.js"></script>
+	<script src="js/HTML_Manager.js"></script>
+
+	<style>
+	</style>
+	
+</head>
+<body onload="init()">
+
+    <nav id="nav-cntnr-id" class="nav-cntnr" onmouseleave = "NavHandler.mouseLeave()">
+    	<div class="nav-label-container">
+    		<label class="nav-label" onmouseover="NavHandler.showHide()">Nav</label>
+    	</div>
+		<div id="nav-dropdown-id" class="nav-dropdown hide-dropdown">
+		    <a href="index.html">Home</a>
+			<a href="ceo.html">CEO</a>
+		    <label><u>Departments</u></label>
+		    <div class="dept-container">
+			    <a href="engineering.html">Engineering</a>
+				<a href="drafting.html">Drafting</a>
+				<a href="technician.html">Technician</a>
+				<a href="computer.html">Computer</a>
+				<a href="education.html">Education</a>
+			</div>
+		</div>
+    <!--    <div id="nav-bottom-id"></div>  -->
+    </nav> 
+
+
+	<div class="page">
+		<h1 class="welcome-label">Welcome to the<br>Media Arts Department</h1>
+	</div>
+
+
+
+    <script>
+    	function init(){
+    		// initialize
+    		NavHandler.init();
+			HTML_Manager.init();
+    	}
+    </script>
+</body>
+</html>

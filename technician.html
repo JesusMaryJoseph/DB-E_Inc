@@ -6,131 +6,11 @@
 	<title>Technician Dept</title>
 
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel="stylesheet" type="text/css" href="css/education/education-pg.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<script src="js/Nav_Handler.js"></script>
 	<script src="js/HTML_Manager.js"></script>
 
-	<style>
-
-		#list-img-id{
-			list-style-image: url("media/imgs/alpha.png");
-		}
-
-		.list-size{
-			font-size: 1.5em;
-		}
-	
-
-		.transition-fade-in{ 
-			transition: opacity 0.5s;
-		}
-
-	/*	.span-spacer{
-			visibility: hidden;
-		} */
-		
-	/* 	.dept-label{
-			font-size: 2em;
-			font-weight: bold;
-		 margin-left: 0.2vw;
-		} */
-	/*	.a-little-history-label{
-			font-size: 1.5em;
-			font-weight: bold;
-		} */
-
-		.dept-contents{
-			display: grid;
-			/*grid-template-columns: 1fr 1fr 1fr;*/
-			grid-template-columns: 33% 33% 33%; 
-			grid-template-areas: "training packet resources";
-			width: 95vw;
-		}
-
-			.dept-label{
-				color: white;
-				font-size: 2.5em;
-				font-weight: bold;
-				margin: auto;
-				padding: 0 10%;
-				cursor: pointer;
-			}
-
-			.dept-training-label{
-				grid-area: training;
-			}
-			.dept-training-label:hover{
-				color: yellow;
-			}
-
-			.dept-packet-label{
-				grid-area: packet;
-			}
-			.dept-packet-label:hover{
-				color: yellow;
-			}
-
-			.dept-resources-label{
-				grid-area: resources;
-			}
-			.dept-resources-label:hover{
-				color: yellow;
-			}
-
-			.dept-welcome-label{
-				position: absolute;
-				top: 0.5em;
-				left: calc(50% - 5em); 
-				color: yellow;
-				/*margin: auto;*/
-			/*	z-index: 10; */
-			}
-
-		.dept-html{
-			position: absolute;
-			top: 0.5em; 
-			left: 25%;
-			width: 50%;
-			height: 95vh;
-			opacity: 0;
-			z-index: -10;
-			transition: opacity 1s;
-			color: yellow;
-			background-image: radial-gradient(blue, black);
-		/*background-color: #2196F3; */
-			border: 2px solid yellow;
-			border-radius: 10px;
-			padding: 0 1em;
-			overflow-y: scroll; 
-			/*z-index: 10; */
-		}
-		.close-dept-html{
-			position:absolute;
-			top: 0;
-			right: 0.5em; 
-			margin-left: 95%;
-			cursor: pointer;
-			color: black;
-			border: 1px solid red; 
-			border-radius: 5px;
-			background-color: red;
-			padding: 0 0.2em;
-			font-size: 1.5em;
-		}
-
-		.close-dept-html:hover{
-			font-size: 1.6em;
-			font-weight: bold;
-		}
-
-		
-
-		/* CSS for Training */
-			.training{
-				font-size: 1.5em;
-			}
-
-	/* End CSS for Training */ 
+	<style> 
 	</style>
 	
 </head>
@@ -149,7 +29,7 @@
 				<a href="drafting.html">Drafting</a>
 				<a href="computer.html">Computer</a>
 				<a href="education.html">Education</a>
-				<a href="media.html">Media</a>
+				<a href="media_arts.html">Media Arts</a>
 			</div>
 		</div>
     <!--    <div id="nav-bottom-id"></div>  -->
@@ -157,14 +37,7 @@
 
 
 	<div class="page">
-		<h1 class="dept-welcome-label">Welcome to the<br>Technician Department</h1>
-		<div class="dept-contents">
-			<label class="dept-label dept-training-label"  onclick="HTML_Manager.load('html/Technician/Build.html')">Build</label>
-			<label class="dept-label dept-packet-label" onclick="HTML_Manager.load('html/Technician/Technician_Packet.html')">Computer<br>Packet</label>
-			<label class="dept-label dept-resources-label" onclick="HTML_Manager.load('html/Technician/Resources.html')">Resources</label>
-	    </div>
-		<article id="html-target-id" class="dept-html">
-		</article>
+		<h1 class="welcome-label">Welcome to the<br>Technician Department</h1>
 	</div>
 
 
