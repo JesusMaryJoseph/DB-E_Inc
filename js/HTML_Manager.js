@@ -2,7 +2,12 @@ let HTML_Manager = {
     //Properties
   //  loaded: false,
    // showing: false,
+    eduContentsSelected: "none",
     htmlTargetEle: {},
+    eduPacketsDropdown: {},
+    eduResourcesDropdown: {},
+    eduTestingDropdown: {},
+    eduTrainingDropdown: {},
 
     //Methods
     load: function(HTMLsourceFile) {
@@ -29,6 +34,16 @@ let HTML_Manager = {
       //  this.showing = true; 
     },
 
+    display: function(contentsSelected){
+        switch(contentsSelected){
+            case "Packets":
+                alert("Contents Selected: " + contentsSelected);
+            this.eduPacketsDropdown.style.display = "block";
+            break;
+            default: alert("no such edu-contents")
+        }
+    }, 
+
     close: function(){
         this.htmlTargetEle.style.opacity = "0";
        /* this.htmlTargetEle.style.zIndex = -10; */
@@ -43,9 +58,13 @@ let HTML_Manager = {
     },
 
     init: function(){
-        //alert("in init()");
+        alert("in HTML_Manager init()");
         this.htmlTargetEle = document.getElementById("html-target-id");
         this.htmlTargetEle.addEventListener("transitionend",this.transitionHasEnded);
-        //alert("after init()");
+        this.eduPacketsDropdown = document.getElementById("edu-packets-dropdown-id");
+        this.eduResourcesDropdown = document.getElementById("edu-resources-dropdown-id");
+        this.eduTrainingDropdown = document.getElementById("edu-training-dropdown-id");
+        this.eduTestingDropdown = document.getElementById("edu-testing-dropdown-id"); 
+        alert("after HTML_Manager init()");
     }
 }

@@ -12,44 +12,82 @@
 	<script src="js/HTML_Manager.js"></script>
 
 	<style>
+		.welcome-label{
+			position: absolute;
+			top: -0.5em;
+			display: block;
+			text-align: center;
+			color: yellow;
+		} 
+
 		.edu-label{
 			font-size: 2em;
 			font-weight: bold;
 			color: yellow;
 			cursor: pointer;
+			padding: 0.1em 0.5em;
 			z-index: 5;
 		}
 			.edu-label:hover{
-				font-size: 2.1em;
+			/*	font-size: 2.1em; */
+				color: lightgreen;
 			}
+	
+			.edu-contents{
+				position: absolute;
+				top: 5.0em;
+				left: 1em;
+				width: 97vw;
+				height: 83vh;
+				display: flex;
+			/*	flex-direction: column;*/
+				justify-content: space-around;
+				align-items: center; 
+				border: 2px solid red;
+			}
+				.edu-contents-selections{
+					display: flex;
+					justify-content: center;
+					align-content: center;
+					flex-wrap: wrap;
+					width: 82vw;
+					height: 97%;
+				/*	margin: 3px;  */
+					border: 2px solid green;
+				}
+					.edu-dropdown{
+						color: yellow;
+						font-size: 1.5em;
+						font-weight: bold;
+					}
+						.edu-dropdown li:hover{
+							cursor: pointer;
+							color: lightgreen;
+						}
+					.edu-packets-dropdown{
+						display: none;
+					}
+					.edu-resources-dropdown{
+						display: none;
+					}
+					.edu-training-dropdown{
+						display: none;
+					}
+					.edu-testing-dropdown{
+						display: none;
+					}
 
-		.edu-contents{
-			display: grid;
-			grid-template-columns:1fr 1fr 1fr;
-			grid-template-rows: 1fr 1fr 1fr;
-			grid-template-areas:
-				'proposal packets resources'
-				'training . testing';
-    		grid-column-gap: 5em;
-		/*	padding: 0 1em; */
-			margin-top: 30vh;
-			/*border: 1px solid red; */
-		}
-			.edu-proposal{
-				grid-area: proposal;
-			}
-			.edu-packets{
-				grid-area: packets;
-			}
-			.edu-resources{
-				grid-area: resources;
-			}
-			.edu-training{
-				grid-area: training;
-			}	}
-			.edu-testing{
-				grid-area: testing;
-			}
+				.edu-contents-selectors{
+					width: 13vw;
+					height: 97%;
+				/*	margin: 3px; */
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center; 
+					border: 2px solid blue;
+				}
+						
 	</style>
 	
 </head>
@@ -77,54 +115,59 @@
 	<div class="page">
 		<h1 class="welcome-label">Welcome to the<br>Education Department</h1>
 		<div class="edu-contents">
-			<label class="edu-label edu-proposal" onclick="HTML_Manager.load('html/Proposal.html')">Proposal</label>
-			<div class="edu-packets">
-				<label class="edu-label">Packets</label>
-			<!--	<div id="edu-packet-drpdwn-id">
+			<div class="edu-contents-selections">
+				<div id="edu-packets-dropdown-id" class="edu-dropdown edu-packets-dropdown">
 					<ul>
-						<li>CEO</li>
+						<li onclick="HTML_Manager.load('html/CEO/CEO_Packet.html')">CEO</li>
 						<li>Engineering</li>
 						<li>Drafting</li>
 						<li>Technician</li>
 						<li>Computer</li>
 						<li>Education</li>
-						<li>Meida/Arts</li>
-					</ul> -->
+						<li>Media/Arts</li>
+					</ul> 
+				</div>
+				<div id="edu-resources-dropdown-id" class="edu-dropdown edu-resources-dropdown">
+					<ul>
+						<li>Resource #1</li>
+						<li>Resource #2</li>
+						<li>Resource #3</li>
+						<li>Resource #4</li>
+					</ul>
+				</div>
+				<div id="edu-training-dropdown-id" class="edu-dropdown edu-training-dropdown">
+					<ul>
+						<li>Training #1</li>
+						<li>Training #2</li>
+						<li>Training #3</li>
+						<li>Training #4</li>
+					</ul>
+				</div>
+				<div id="edu-testing-dropdown-id" class="edu-dropdown edu-testing-dropdown">
+					<ul>
+						<li>Test #1</li>
+						<li>Test #2</li>
+						<li>Test #3</li>
+						<li>Test #4</li>
+					</ul>
+				</div>
+			</div>
+			<div class="edu-contents-selectors">
+				<label class="edu-label edu-proposal" onclick="HTML_Manager.load('html/Proposal.html')">Proposal</label>
+				<div class="edu-packets">
+					<label class="edu-label" onclick="HTML_Manager.display('Packets')">Packets</label>
 				</div>
 				<div class="edu-resources">
 					<label class="edu-label">Resources</label>
-				<!--	<div id="edu-resources-drpdwn-id">
-						<ul>
-							<li>Resource #1</li>
-							<li>Resource #2</li>
-							<li>Resource #3</li>
-							<li>Resource #4</li>
-						</ul>
-					</div> -->
 				</div>
 				<div class="edu-training">
 					<label class="edu-label">Training</label>
-				<!--	<div id="edu-training-drpdwn-id">
-						<ul>
-							<li>Resource #1</li>
-							<li>Resource #2</li>
-							<li>Resource #3</li>
-							<li>Resource #4</li>
-						</ul>
-					</div> -->
 				</div>
 				<div class="edu-testing">
 					<label class="edu-label">Testing</label>
-				<!--	<div id="edu-testing-drpdwn-id">
-						<ul>
-							<li>Test #1</li>
-							<li>Test #2</li>
-							<li>Test #3</li>
-							<li>Test #4</li>
-						</ul>
-					</div> -->
 				</div>
-	    </div>
+			</div>
+		</div>
 		<article id="html-target-id" class="dept-html">
 		</article>
 	</div>

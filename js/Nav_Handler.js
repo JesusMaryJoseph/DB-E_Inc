@@ -51,9 +51,9 @@ let NavHandler = {
 	},
 
 	init: function(){
-	//	alert("in NavHandler.init()");
+		//alert("in NavHandler.init()");
 		this.navDropDownId = document.getElementById("nav-dropdown-id");
-	 //  alert("NavHandler.init() finished");
+	   //alert("NavHandler.init() finished");
 	}
 
 
