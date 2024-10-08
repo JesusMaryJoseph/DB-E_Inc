@@ -37,7 +37,7 @@ let HTML_Manager = {
     display: function(contentsSelected){
         switch(contentsSelected){
             case "Packets":
-                alert("Contents Selected: " + contentsSelected);
+                //alert("Contents Selected: " + contentsSelected);
             this.eduPacketsDropdown.style.display = "block";
             break;
             default: alert("no such edu-contents")
@@ -58,13 +58,13 @@ let HTML_Manager = {
     },
 
     init: function(){
-        alert("in HTML_Manager init()");
+        //alert("in HTML_Manager init()");
         this.htmlTargetEle = document.getElementById("html-target-id");
         this.htmlTargetEle.addEventListener("transitionend",this.transitionHasEnded);
         this.eduPacketsDropdown = document.getElementById("edu-packets-dropdown-id");
         this.eduResourcesDropdown = document.getElementById("edu-resources-dropdown-id");
         this.eduTrainingDropdown = document.getElementById("edu-training-dropdown-id");
         this.eduTestingDropdown = document.getElementById("edu-testing-dropdown-id"); 
-        alert("after HTML_Manager init()");
+        //alert("after HTML_Manager init()");
     }
 }
