@@ -18,6 +18,7 @@
 		align-content: center;
 	/*	color: white; */
 		background-image: radial-gradient(blue, black);
+		overflow: hidden;
 	}
 
 		.welcome-label{

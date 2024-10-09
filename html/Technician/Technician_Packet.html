@@ -1,14 +1,127 @@
-<label class="close-dept-html" onclick="HTML_Manager.close()">Close</label>
-<label class="dept-label">Education Packet<br></label>
-<ol type="I" class="list-size">
-    <li>Responsibilities:
-        <ol type="A">  
-            <li>Training</li>
-            <li>Testing</li>
-            <li>Quality Control? This would be a CEO decision.<br>Could also be done by appropriate Dept: Engineering, Drafting, Technician, Computer</li>
-            <li>CEO could also asign this Dept to maintain Nomenclature uniformity.</li>
-        </ol>
-    </li>
-</ol>
-
-
+<label class="close-html" onclick="HTML_Manager.close()">Close</label>
+<div class="packet">
+    <label class="packet-label">Technician Packet<br></label>
+    <ol type="I" class="list-size">
+        <li>Responsibilities:
+            <ol type="A">  
+                <li>Training</li>
+                    <ol type="1">
+                        <li>All training will done in the Education Department.</li>
+                        <li>First Priority: Architecture
+                            <ol type="a">
+                                <li>Everyone should be well versed in Hardware Architecture.</li>
+                                <li>Anyone working on the Control Module should know the Software Architecture.</li>
+                            </ol>
+                        </li>
+                        <li>Second Priority: Training in Basic Electronics and Breadboarding</li>
+                        <li>Third Priority: Folder Structure
+                            <ol type="a">
+                                <li>All work will be uploaded to GitHub, which is managed by the Computer Dept.</li>
+                                <li>So encourage every worker to make daily logs of their work throughout each day. </li>
+                                <li>They should make a short description in libre office write or calc.</li>
+                                <li>eg 1.) Added 74LS161, inputs & outpus.</li>
+                                <li> 2.) Made all connections</li>
+                                <li> 3.) Ran: eveything ok</li>
+                                <li>GitHub is a "version control system" for the whole company, preserving every single change thourghout the complete project.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                <li>Assigning Duties: Who does What.
+                    <ol type="1">
+                        <li>Counter Module
+                            <ol type="a">
+                                <li>Program Counter</li>
+                                <li>Micro Counter (Could be included in the Control Module)</li>
+                                <li>Multiplexer for the four 7-Segment Displays<br>
+                                    (Cound be included in the Output Module)</li>
+                            </ol>
+                        </li>
+                        <li>Arithmetic Logic Unit (ALU) Module
+                            <ol type="a">
+                                <li>Arithmetic Unit (AU)</li>
+                                <li>Logic Unit (LU) Only if extra time is available!</li>
+                                <li>Error Flag(FC) for both + and +/- numbers(2S)</li>
+                                <li>Sum = 0 Flag(FZ)</li>
+                                <li>Flag Register to store FC and FZ flags.</li>
+                            </ol>
+                        </li>
+                        <li>Output Module
+                            <ol type="a">
+                                <li>8-bit Register</li>
+                                <li>Multiplexer Clock plus demultiplexer</li>
+                                <li>Four(4) 7-Segment Displays.</li>
+                                <li>One EEPROM. Like the two Control EEPROMs, this EEPROM will also be programmed by the Computer Dept. 
+                                    This requires no input from the Engineering Dept but be sure to co</li>
+                                <li>One Control Signal(2S) which will connect to address a10 of the EEPROM. 
+                                    When 2S is connected to ground(GND) the EEPROM will output only positive numbers [0,255].</li>
+                                    When 2S is connected to 5V(VCC) the EEPROM will ouput +/- numbers [-128,127].
+                            </ol>
+                        </li>
+                        <li>Clock Module
+                            <ol type="a">
+                                <li>Clock (LM555) </li>
+                                <li>Push Botton for Step by Step operation</li>
+                                <li>Switch which will allow for either 'Continous'(Clock) or 'Step by Step'(Button) operation. </li>
+                                <li>Provide 2nd Clock Signal is out of sync with Clock. eg when clock is '0' 2nd clock is '1' and vice versa. Hint: NOT gate!</li>
+                            </ol>
+                        </li>
+                        <li>BUS Module
+                            <ol type="a">
+                                <li>Possible Option(Engineering Manager's responsibility</li>
+                                <li>Design the BUS which <bold>MUST</bold> include the 74LS245 Transceivers.<br>
+                                    Although Ben Eater places all Transceivers on the individual Modules, the Transceivers provide the integrity of the BUS and,
+                                therefore, should remain with the BUS Designer!</li>
+                                <li>Add Modules to the BUS as these Modules are completed.</li>
+                            </ol>
+                        </li>
+                        <li>Memory(RAM) Module:
+                            <ol type="a">
+                                <li>Memory Address Register(4-bit)</li>
+                                <li>Manual Address Input (4-bit DIP Switches)</li>
+                                <li>4 bit Multiplexer between Memory & Manual Addresses</li>
+                                <li>Run/Program Switch.</li>
+                                <li>16 Byte RAM</li>
+                                <li>Manual Data Input (8-bit DIP Switches</li>
+                                <li>8 bit Multiplexer between Memory & Manual Data</li>
+                            </ol>
+                        </li>
+                        <li>Control Module
+                            <ol type="a">
+                                <li>Instruction Register(8-bit)</li>
+                                <li>Micro Step Counter with decoder</li>
+                                <li>2 EEPROMs: NOTE: The programming of these EEPROMs will be done by the Computer Department.<br>
+                                This will require coordination between the Engineering & Computer Depts. The Engineering Dept must first allocate each Control Signals to the EEPROM outputs after which the Computer Dept can actually program them!</li>
+                                <li>While Ben Eater has ALL Instructions decoded in the EEPROMs, for this project, ALL Jump instructions MUST be handled with "discrete components".<br>
+                                eg AND, OR, NOT gates (74LS08, 74LS32, 74LS04 ICs)</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Quality Control
+                    <ol type="1">
+                        <li>While the Technician should run the tests, The Technician Manager should probably be the one to set up the Tests themselves.
+                            <ol type="i">
+                                <li>Example:Tests for Program Counter (74LS161)
+                                    <ol>
+                                        <li>Test: counting from 0 to 15</li>
+                                        <li>Test: input 4-bit data</li>
+                                        <li>Test: ability to Clear count</li>
+                                    </ol>
+                                </li>
+                                <li>Example:Tests for ALU<br>
+                                    NOTE: This will be challenging to test for <bold>every</bold> possibility.</li> 
+                                    <ol>
+                                        <li>Test: for accuracy of addition of some! #'s as well as correct values for flags FC & FZ</li>
+                                        <li>Test: for accuracy of subtraction of some! #'s as well as correct values for flags FC & FZ.</li>
+                                        <li>NOTE: for adding two numbers there are 256x256 posibilities (65,536)</li>
+                                        <li>Note: Testing in "Digital" does provide the capabilities to loop! to handle problems like above.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>

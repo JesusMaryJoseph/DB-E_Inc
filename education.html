@@ -12,6 +12,8 @@
 	<script src="js/HTML_Manager.js"></script>
 
 	<style>
+		
+
 		.welcome-label{
 			position: absolute;
 			top: -0.5em;
@@ -87,6 +89,21 @@
 					align-items: center; 
 					border: 2px solid blue;
 				}
+
+				.dept-html{
+					font-size: 1.3em;
+					font-weight: bold;
+				}
+
+				.packet{
+					font-size: 1.3em;
+					font-weight: bold;
+				}
+
+					.packet-label{
+						font-size: 1.5em;
+						font-weight: bold;
+					}
 						
 	</style>
 	
@@ -119,12 +136,12 @@
 				<div id="edu-packets-dropdown-id" class="edu-dropdown edu-packets-dropdown">
 					<ul>
 						<li onclick="HTML_Manager.load('html/CEO/CEO_Packet.html')">CEO</li>
-						<li>Engineering</li>
-						<li>Drafting</li>
-						<li>Technician</li>
-						<li>Computer</li>
-						<li>Education</li>
-						<li>Media/Arts</li>
+						<li onclick="HTML_Manager.load('html/Engineering/Engineering_Packet.html')">Engineering</li>
+						<li onclick="HTML_Manager.load('html/Drafting/Drafting_Packet.html')">Drafting</li>
+						<li onclick="HTML_Manager.load('html/Technician/Technician_Packet.html')">Technician</li>
+						<li onclick="HTML_Manager.load('html/Computer/Computer_Packet.html')">Computer</li>
+						<li onclick="HTML_Manager.load('html/Education/Education_Packet.html')">Education</li>
+						<li onclick="HTML_Manager.load('html/MediaArts/MediaArts_Packet.html')">Media Arts</li>
 					</ul> 
 				</div>
 				<div id="edu-resources-dropdown-id" class="edu-dropdown edu-resources-dropdown">
